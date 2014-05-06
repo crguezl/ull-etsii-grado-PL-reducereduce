@@ -27,7 +27,7 @@ Sometimes reduce/reduce conflicts can occur that don't look warranted. Here is a
                 ;
 
 It would seem that this grammar can be parsed with only a single
-token of look-ahead: when a param_spec is being read, an `ID` is a
+token of look-ahead: when a `param_spec` is being read, an `ID` is a
 name if a comma or colon follows, or a type if another `ID` follows.
 In other words, this grammar is LR(1).
 
