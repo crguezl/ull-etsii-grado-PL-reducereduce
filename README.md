@@ -31,13 +31,13 @@ token of look-ahead: when a param_spec is being read, an `ID` is a
 name if a comma or colon follows, or a type if another `ID` follows.
 In other words, this grammar is LR(1).
 
-However, Bison, like most parser generators, cannot actually handle
+However, Jison, like most parser generators, cannot actually handle
 all LR(1) grammars. In this grammar, two contexts, that after an
 `ID` at the beginning of a param_spec and likewise at the beginning
-of a return_spec, are similar enough that Bison assumes they are
+of a return_spec, are similar enough that Jison assumes they are
 the same. They appear similar because the same set of rules would
 be active--the rule for reducing to a name and that for reducing
-to a type. Bison is unable to determine at that stage of processing
+to a type. Jison is unable to determine at that stage of processing
 that the rules would require different look-ahead tokens in the two
 contexts, so it makes a single parser state for them both. Combining
 the two contexts causes a conflict later. In parser terminology,
@@ -46,7 +46,7 @@ this occurrence means that the grammar is not LALR(1).
 In general, it is better to fix deficiencies than to document them.
 But this particular deficiency is intrinsically hard to fix; parser
 generators that can handle LR(1) grammars are hard to write and
-tend to produce parsers that are very large. In practice, Bison is
+tend to produce parsers that are very large. In practice, Jison is
 more useful as it is now.
 
 When the problem arises, you can often fix it by identifying the
