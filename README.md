@@ -1,4 +1,4 @@
-*Mysterious Reduce/Reduce Conflicts
+#Mysterious Reduce/Reduce Conflicts
 
 See [http://ftp.gnu.org/old-gnu/Manuals/bison-1.35/html_node/Mystery-Conflicts.html](http://ftp.gnu.org/old-gnu/Manuals/bison-1.35/html_node/Mystery-Conflicts.html).
 
